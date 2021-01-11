@@ -1,2 +1,2 @@
 # Zoomba
-The all new and improved codebase for zombi! 
+The all new and improved codebase for zomba! 
