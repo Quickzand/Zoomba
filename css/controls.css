@@ -1,0 +1,69 @@
+.controlButton {
+  width: 5vw;
+  height: 5vw;
+  background: var(--main-foreground-color);
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.wheelSlider {
+  width: 5vw;
+  height: 30vw;
+  margin: 0;
+  padding: 0;
+  background: var(--main-foreground-color);
+  position: relative;
+  border: solid var(--inset-background-color) 5px;
+}
+
+.wheelSlider input {
+  -webkit-appearance: none;
+  width: 30vw;
+  height: 5vw;
+  outline: none;
+  background: none;
+  margin: 0;
+  transform: rotate(90deg) translateY(-100%);
+  transform-origin: left top;
+  padding: 0;
+}
+
+.wheelSlider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 5vw;
+  height: 5vw;
+  background: var(--main-accent-color);
+}
+
+.wheelSlider input::-webkit-slider-thumb:active {
+  filter: brightness(0.8);
+}
+
+#leftWheelSliderContainer {
+  float: left;
+}
+
+#rightWheelSliderContainer {
+  float: right;
+}
+
+.wheelSliderContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 50vw;
+}
+
+.wheelSliderValue {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+#controlsContainer {
+  width: 75%;
+  position: absolute;
+  left: 50%;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+}
