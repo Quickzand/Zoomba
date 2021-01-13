@@ -57,11 +57,11 @@ nav {
 }
 
 .navElement:not(:first-child) {
-  border-right: solid var(--secondary-accent-color) 0.1vw;
+  border-right: solid var(--secondary-accent-color) max(0.1vw, 1px);
 }
 
 .navElement:not(:last-child) {
-  border-left: solid var(--secondary-accent-color) 0.1vw;
+  border-left: solid var(--secondary-accent-color) max(0.1vw, 1px);
 }
 
 .navElement.selected {
@@ -92,4 +92,31 @@ nav {
 
 .tab.selected {
   z-index: 1;
+}
+
+/* MOBILE STUFF */
+@media screen and (max-width: 800px) {
+  nav {
+    top: auto;
+    bottom: 0px;
+    height: max(5vw, calc(50px + 2.8vw));
+    max-height: 50px;
+    border-top-color: var(--main-accent-color);
+    border-top-width: max(0.2vw, 2px);
+    border-top-style: solid;
+    border-bottom: none;
+  }
+
+  #navContainer {
+    font-size: max(4vw, 10px);
+  }
+
+  .navElement {
+    padding: 0.8vw;
+    padding-bottom: 0;
+    padding-top: 0;
+    height: 100%;
+    width: 100%;
+    transition: color 0.5s;
+  }
 }
